@@ -304,3 +304,33 @@ print(loss.item())
 with open('chat-02.pkl', 'wb') as f:
     pickle.dump(model, f)
 print('model saved')
+
+model = GPTLanguageModel(vocab_size)
+print('loading model parameters...')
+with open('model-01.pkl', 'rb') as f:
+    model = pickle.load(f)
+print('loaded successfully!')
+m = model.to(device)
+print(m)
+print('model loaded')
+print('starting training...')
+for iter in range(max_iters):
+    print
+    if iter % eval_iters == 0:
+        losses = estimate_loss()
+        print(f"step: {iter}, train loss: {losses['train']:.3f}, val loss: {losses['val']:.3f}")
+
+    # sample a batch of data
+    xb, yb = get_batch('train')
+
+    # evaluate the loss
+    logits, loss = model.forward(xb, yb)
+    optimizer.zero_grad(set_to_none=True)
+    loss.backward()
+    optimizer.step()
+print(loss.item())
+
+with open('model-02.pkl', 'wb') as f:
+    pickle.dump(model, f)
+print('model saved')
+print('training complete')   
