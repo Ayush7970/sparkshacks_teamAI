@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # Allow frontend (React) to communicate with backend (Flask)
+CORS(app)  
 
 # Ollama API endpoint
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
