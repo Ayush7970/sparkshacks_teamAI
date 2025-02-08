@@ -124,6 +124,13 @@ We welcome contributions! Please submit pull requests for any enhancements or bu
 
 This project is licensed under the MIT License.
 
-## 📬 Contact
+## 📬 Developers
 
-For any queries, feel free to reach out!
+This project was developed during a 24 hour long hackathon by the name of SparkHacks, held by University of Illinois Chicago.
+This project was made by:
+- Vansh "V" Mattraa
+- Hanel Vujic
+- Ayush Bhardwaj
+- Anupam Sai Sistla
+- Maaz Iqbal
+
