@@ -1,3 +1,12 @@
+"""
+Authors: Ayush, Anupam, Vansh, Hanel, Maaz
+Date: 02-08-2025
+Description:
+    Accept user input from React frontend and pipe it into an Ollama query.
+    Makes use of Flask to open a localhost on port 5000. If port 5000 is busy,
+    we search linearly for the next open port, up till a range of "portRange."
+"""
+
 import requests
 import json
 from flask import Flask, request, jsonify
