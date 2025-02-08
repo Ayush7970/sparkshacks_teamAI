@@ -7,6 +7,7 @@ Description:
     we search linearly for the next open port, up till a range of "portRange."
 """
 
+from socket import *
 import requests
 import json
 from flask import Flask, request, jsonify
@@ -18,15 +19,23 @@ CORS(app)
 # Ollama API endpoint
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
 
-def tryPort(startingPort, portRange):
-    return startingPort
-    # while i < portRange
-    # check if start + i is a free port
-    # if so, return that number
-    # if we exit loop, no port in range [start, start + portRange] is free so return -1 or something
+# for now, keep constant IP to be loop back address
+IP_ADDRESS = '127.0.0.1'
 
-# def freePort(tryPort):
-    # check if tryPort is an available port for Flask
+# start at startingPort and try portRange amount of times to linear search for an available port
+def tryPort(startingPort, portRange):
+    for i in range(portRange):
+        if freePort(startingPort + i):
+            return startingPort + i
+
+# check if tryPort is an available port for Flask
+def freePort(tryPort):
+    dummyTCP = socket(AF_INET, SOCK_STREAM)
+
+    connection = socket.connect(IP_ADDRESS, tryPort)   # try to connect
+    connection.settimeout(2)    # keep 2 second timeout before we let it go
+
+    return connection != 0
 
 @app.route("/chat", methods=["POST"])
 def chat():
