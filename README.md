@@ -55,7 +55,7 @@ The backend serves as the core of the application, handling data processing, use
 │   │── email_alert.py        # Email alert system
 │   │── weather_data.py       # Dependencies
 │   │── disaster_model.pkl    # LLM AI chatbot
-
+|
 │── frontend/
 │   │── src/
 │   │   │── Components/       # React UI components
@@ -63,6 +63,13 @@ The backend serves as the core of the application, handling data processing, use
 │   │   │── Assets/           # Asset files
 │   │   │── App.js            # Main application file
 │   │   │── index.js          # Entry point
+|
+│── model/
+│   │── chatbot.py            # Main AI LLM python file
+│   │── data-extract-v2.py    
+│   │── data-extract-v3.py
+│   │── training.py           # Trains the model
+|
 │── README.md                 # Project documentation
 ```
 
