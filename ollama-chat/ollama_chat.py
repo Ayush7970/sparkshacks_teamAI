@@ -23,16 +23,18 @@ OLLAMA_API_URL = "http://localhost:11434/api/generate"
 IP_ADDRESS = '127.0.0.1'
 
 # start at startingPort and try portRange amount of times to linear search for an available port
+# TODO: Ollama_chat.jsx hardcodes 5000, so tryPort is cause that to break, commented out currently
 def tryPort(startingPort, portRange):
-    for i in range(portRange):
-        if freePort(startingPort + i):
-            return startingPort + i
+    return startingPort
+    # for i in range(portRange):
+    #     if freePort(startingPort + i):
+    #         return startingPort + i
 
 # check if tryPort is an available port for Flask
 def freePort(tryPort):
     dummyTCP = socket(AF_INET, SOCK_STREAM)
 
-    connection = socket.connect(IP_ADDRESS, tryPort)   # try to connect
+    connection = dummyTCP.connect(IP_ADDRESS, tryPort)   # try to connect
     connection.settimeout(2)    # keep 2 second timeout before we let it go
 
     return connection != 0
