@@ -87,7 +87,7 @@ The backend serves as the core of the application, handling data processing, use
    ```sh
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   pip install -r requirements.txt
+   pip install flask flask_cors pandas numpy apscheduler requests
    ```
 3. Run the Flask server:
    ```sh
