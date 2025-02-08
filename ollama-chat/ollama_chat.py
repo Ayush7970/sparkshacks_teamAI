@@ -20,7 +20,6 @@ def chat():
     if not user_input:
         return jsonify({"error": "Message is required"}), 400
 
-    # Prepare the request payload for Ollama
     payload = {
         "model": "mistral",  # Change to another model if needed
         "prompt": user_input,
