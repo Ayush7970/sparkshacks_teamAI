@@ -1,0 +1,37 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Farmer Body -->
+  <path d="M200 150 C180 150 160 180 160 220 C160 260 180 300 200 300 C220 300 240 260 240 220 C240 180 220 150 200 150" fill="#4A4A4A"/>
+  
+  <!-- Overalls -->
+  <path d="M170 220 L170 290 L230 290 L230 220 L215 200 L185 200 Z" fill="#2B579A"/>
+  <rect x="185" y="200" width="30" height="20" fill="#2B579A"/>
+  
+  <!-- Overall Straps -->
+  <rect x="185" y="170" width="8" height="40" fill="#2B579A"/>
+  <rect x="207" y="170" width="8" height="40" fill="#2B579A"/>
+  
+  <!-- Shirt -->
+  <path d="M180 170 C180 190 220 190 220 170 L220 150 L180 150 Z" fill="#F8B88B"/>
+  
+  <!-- Head -->
+  <circle cx="200" cy="130" r="30" fill="#F8D5A3"/>
+  
+  <!-- Hat -->
+  <path d="M160 120 L240 120 L200 90 Z" fill="#FF9933"/>
+  <rect x="155" y="115" width="90" height="10" fill="#FF9933"/>
+  
+  <!-- Face -->
+  <path d="M185 130 C185 135 195 140 200 140 C205 140 215 135 215 130" fill="none" stroke="#333" stroke-width="2"/>
+  
+  <!-- Eyes -->
+  <circle cx="190" cy="125" r="2" fill="#333"/>
+  <circle cx="210" cy="125" r="2" fill="#333"/>
+  
+  <!-- Arms -->
+  <path d="M170 200 C150 220 140 240 145 260" fill="none" stroke="#F8B88B" stroke-width="10"/>
+  <path d="M230 200 C250 220 260 240 255 260" fill="none" stroke="#F8B88B" stroke-width="10"/>
+  
+  <!-- Boots -->
+  <rect x="165" y="290" width="25" height="15" fill="#654321"/>
+  <rect x="210" y="290" width="25" height="15" fill="#654321"/>
+</svg>
