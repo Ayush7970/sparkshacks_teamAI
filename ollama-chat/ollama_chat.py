@@ -18,6 +18,16 @@ CORS(app)
 # Ollama API endpoint
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
 
+def tryPort(startingPort, portRange):
+    return startingPort
+    # while i < portRange
+    # check if start + i is a free port
+    # if so, return that number
+    # if we exit loop, no port in range [start, start + portRange] is free so return -1 or something
+
+# def freePort(tryPort):
+    # check if tryPort is an available port for Flask
+
 @app.route("/chat", methods=["POST"])
 def chat():
     """
@@ -52,4 +62,6 @@ def chat():
 
 if __name__ == "__main__":
     print("Starting Flask server...")
-    app.run(port=5000, debug=True)  # Run Flask on port 5000
+    availablePort = tryPort(5000, 20)   # starting from 5000, keep trying 20 ports after to look for an available one
+
+    app.run(port=availablePort, debug=True)  # Run Flask on port 5000
