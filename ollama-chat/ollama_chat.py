@@ -26,6 +26,7 @@ def chat():
     data = request.json
     user_input = data.get("message", "")
 
+    # handle empty input
     if not user_input:
         return jsonify({"error": "Message is required"}), 400
 
@@ -39,15 +40,15 @@ def chat():
         # Send request to Ollama API
         response = requests.post(OLLAMA_API_URL, json=payload)
 
+        # code 200 OK = successful request
         if response.status_code == 200:
             response_data = response.json()
             bot_response = response_data.get("response", "No response received.")
             return jsonify({"response": bot_response})
         else:
             return jsonify({"error": f"Error from Ollama: {response.status_code}, {response.text}"}), 500
-
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error": f'RUNTIME ERROR: {str(e)}'}), 500  # runtime error, embolden so it sticks out in output
 
 if __name__ == "__main__":
     print("Starting Flask server...")
