@@ -1,0 +1,566 @@
+
+.about-section-container {
+    margin-top: 20rem; /* Adds significant top margin to create space from previous content sections. */
+    position: relative; /* Establishes a positioning context for absolutely positioned child elements. */
+    display: flex; /* Utilizes flexbox for layout, allowing child elements to be aligned and spaced efficiently. */
+    align-items: center; /* Centers the children vertically within the container. */
+    justify-content: space-between; /* Distributes space between child elements evenly. */
+  }
+  
+  
+  .about-background-image-container {
+    position: absolute;
+    left: -150px; /* Positions the background image 150px to the left of its parent container. */
+    z-index: -2; /* Ensures the image is behind all other positioned elements. */
+  }
+  
+  .about-section-image-container {
+    flex: 0.9; /* Takes up 90% of the available space, allowing for slight expansion or contraction. */
+    margin-right: 1rem; /* Right margin for spacing from adjacent elements. */
+  }
+  
+  .about-section-text-container {
+    flex: 1; /* Flex grow factor allows the container to take up remaining space in the flex container. */
+    justify-content: center; /* Vertically centers content within the container. */
+    display: flex; /* Establishes a flex container for vertical stacking of children. */
+    flex-direction: column; /* Aligns children in a vertical column. */
+  }
+  
+  .primary-subheading {
+    font-weight: 700; /* Bold text for emphasis. */
+    color: #fe9e0d; /* Orange text color to draw attention and match thematic elements. */
+    font-size: 1.15rem; /* Slightly larger text size for subheadings to differentiate from body text. */
+  }
+  
+  
+  .about-buttons-container {
+    margin-top: 2rem; /* Top margin to separate buttons from text above. */
+    display: flex; /* Uses flexbox to layout button elements horizontally. */
+  }
+  
+  
+  .watch-video-button {
+    margin-left: 2rem; /* Left margin to create space between this button and others in the container. */
+    background-color: transparent; /* No background to keep the button minimalistic. */
+    outline: none; /* Removes the default focus outline to maintain a clean look. */
+    border: none; /* No borders to keep the button sleek and modern. */
+    border-radius: 5rem; /* Fully rounded edges for a pill-shaped appearance. */
+    font-size: 1.1rem; /* Sets the font size for clear legibility. */
+    cursor: pointer; /* Changes the cursor to indicate the element is clickable. */
+    font-weight: 600; /* Bold font to make the text stand out. */
+    color: #484848; /* Dark grey text color for readability and contrast. */
+    transition: 0.2s; /* Smooth transition for hover effects. */
+    display: flex; /* Flexbox for aligning the icon and text within the button. */
+    align-items: center; /* Centers content vertically within the button. */
+    justify-content: center; /* Centers content horizontally within the button. */
+  }
+  
+  
+  .watch-video-button svg {
+    font-size: 3rem; /* Large icon size to make it prominent within the button. */
+    margin-right: 1rem; /* Right margin to space the icon from the text. */
+  }
+  
+  .contact-page-wrapper h1 {
+    max-width: 900px !important; /* Limits the width of the heading in the contact page for optimal readability. */
+  }
+  
+  
+  .contact-page-wrapper {
+    display: flex; /* Flexbox for layout. */
+    align-items: center; /* Vertically centers children within the wrapper. */
+    justify-content: center; /* Horizontally centers children within the wrapper. */
+    flex-direction: column; /* Stacks children vertically. */
+    margin: 6rem 0rem; /* Top and bottom margin for spacing from adjacent sections. */
+  }
+  
+  .contact-form-container {
+    background-color: white; /* Sets the background color of the form container to white for clarity. */
+    max-width: 700px; /* Maximum width of the form container to ensure it doesn't become too wide on larger screens. */
+    width: 100%; /* Uses the full width of its container by default. */
+    margin-top: 3rem; /* Top margin to create space from content above. */
+    display: flex; /* Flexbox to layout the form elements horizontally. */
+    align-items: center; /* Centers form elements vertically. */
+    padding: 1rem; /* Padding around the content within the form container for spacing. */
+    border-radius: 5rem; /* Rounds the corners of the form container for a softer, more approachable look. */
+  }
+  
+  
+  .contact-form-container input {
+    flex: 1; /* Allows the input field to grow and fill available space. */
+    height: 100%; /* Full height relative to its parent container to maintain a consistent form element height. */
+    border: none; /* No border for a clean, modern appearance. */
+    outline: none; /* Removes the default outline to prevent a boxy look when focused. */
+    font-size: 1.3rem; /* Larger font size for easy readability. */
+    padding: 0.5rem 1rem; /* Padding inside the input field for better text alignment and spacing. */
+  }
+  
+  
+  .footer-wrapper {
+    margin: 6rem 0rem; /* Top and bottom margin for spacing. */
+    display: flex; /* Uses flexbox to layout footer elements. */
+    margin-top: 10rem; /* Additional top margin to create significant space from the content above. */
+  }
+  
+  
+  .footer-logo-container {
+    max-width: 110px; /* Limits the width of the logo in the footer to maintain size consistency. */
+  }
+  
+  .footer-icons {
+    margin-top: 2.5rem; /* Top margin to create space from other content within the footer. */
+  }
+  
+  .footer-icons svg {
+    font-size: 1.5rem; /* Icon size in the footer for visibility and aesthetic balance. */
+    margin-right: 1.25rem; /* Right margin to space out icons horizontally. */
+    color: #585858; /* Sets the icon color to a medium grey for subtle visibility against the footer background. */
+  }
+  
+  /* Commented out for potential future use or reference. */
+  /* .footer-section-one {
+    border: 2px solid blue;
+  } */
+  
+  
+  .footer-section-two {
+    flex: 1; /* Allows this section to fill the space within its container. */
+    display: flex; /* Flexbox for aligning children horizontally. */
+    justify-content: flex-end; /* Aligns children to the right of the container. */
+  }
+  
+  
+  .footer-section-columns {
+    display: flex; /* Flexbox for layout. */
+    flex-direction: column; /* Stacks items vertically. */
+    min-width: 190px; /* Minimum width to ensure content does not squeeze too tightly on smaller screens. */
+  }
+  
+  
+  .footer-section-columns span {
+    margin: 0.25rem 0rem; /* Top and bottom margins to space out list items slightly. */
+    font-weight: 600; /* Bold text for emphasis and easy readability. */
+    color: #4c4c4c; /* Medium grey color for text, providing good contrast against light backgrounds. */
+    cursor: pointer; /* Changes the cursor to indicate clickable elements. */
+  }
+  
+  
+  .testimonial-section-bottom {
+    margin-top: 2rem; /* Top margin to create space from content above. */
+    background-color: white; /* White background to highlight this section against other content. */
+    padding: 1.5rem 2rem; /* Padding around the content for spacing and comfort. */
+    display: flex; /* Flexbox for layout. */
+    align-items: center; /* Vertically centers children within the testimonial section. */
+    justify-content: center; /* Horizontally centers content within the testimonial section. */
+    max-width: 750px; /* Maximum width to control the size of the testimonial section on larger screens. */
+    border-radius: 2rem; /* Rounds the corners of the section for a softer appearance. */
+    flex-direction: column; /* Stacks children vertically. */
+    text-align: center; /* Centers text within the testimonial section for consistency and focus. */
+  }
+  
+  
+  /* Specific positioning for a centralized appearance in its container. */
+  .testimonial-section-bottom {
+    margin: 2rem auto; /* Automatically centers the section horizontally within its container. */
+  }
+  
+  
+  .testimonial-section-bottom p {
+    font-weight: 700; /* Bold text for emphasis and clarity. */
+    color: #515151; /* Dark grey text color for readability and aesthetic consistency. */
+    max-width: 500px; /* Limits width for optimal line length and readability. */
+    font-size: 1.1rem; /* Slightly larger text size for focus and readability. */
+    margin: 2rem 0rem; /* Top and bottom margins to create space from other elements within the testimonial section. */
+  }
+  
+  
+  .testimonials-stars-container svg {
+    margin: 0rem 0.25rem; /* Right and left margins to space stars slightly apart. */
+    font-size: 1.5rem; /* Sets the size of the star icons for visibility. */
+    color: #fe9e0d; /* Orange color for the stars, providing a vibrant, attention-grabbing look. */
+  }
+  
+  
+  .testimonial-section-bottom h2 {
+    margin-top: 1.5rem; /* Top margin to space the heading from content above it. */
+  }
+  
+  .work-section-wrapper {
+    margin-top: 15rem; /* Significant top margin to create vertical spacing from adjacent content. */
+  }
+  
+  
+  .work-section-top p {
+    text-align: center; /* Centers the text horizontally for a balanced look. */
+    max-width: 600px !important; /* Important to override other styles that might specify a max-width. */
+  }
+  
+  
+  .work-section-top h1 {
+    max-width: 700px !important; /* Important to override other styles for maximum width. */
+  }
+  
+  
+  .work-section-top {
+    display: flex; /* Uses flexbox to layout children. */
+    justify-content: center; /* Horizontally centers children within the section. */
+    align-items: center; /* Vertically centers children within the section. */
+    flex-direction: column; /* Stacks children vertically for a clear, organized look. */
+  }
+  
+  
+  .work-section-info {
+    width: 290px; /* Width of each info card to ensure consistency. */
+    min-height: 350px; /* Minimum height to ensure cards do not become too small. */
+    background-color: white; /* White background to make the info cards stand out against other elements. */
+    padding: 1rem 2rem; /* Padding inside the cards for text spacing and aesthetic. */
+    display: flex; /* Flexbox for layout within the cards. */
+    flex-direction: column; /* Stacks content vertically within each card. */
+    justify-content: center; /* Centers content vertically within the card. */
+    align-items: center; /* Centers content horizontally within the card. */
+    text-align: center; /* Ensures text within the card is centered for readability. */
+    border-radius: 1rem; /* Softly rounded corners for a friendly, approachable look. */
+    color: #505050; /* Medium grey text color for good readability against the white background. */
+    margin: 1rem 2rem; /* Right and left margins to create space between cards horizontally. */
+  }
+  
+  .work-section-info h2 {
+    margin: 1rem 0rem; /* Top and bottom margins to space the heading from other text. */
+  }
+  
+  .work-section-bottom {
+    margin-top: 5rem; /* Top margin to create vertical spacing from the content above. */
+    display: flex; /* Uses flexbox to layout child elements. */
+    justify-content: center; /* Horizontally centers children within the section. */
+    align-items: center; /* Vertically centers children within the section. */
+    flex-wrap: wrap; /* Allows children to wrap onto the next line if there's not enough space. */
+  }
+  
+  .work-section-info p {
+    flex: 1; /* Allows paragraphs within each info card to expand and fill the available space. */
+    display: flex; /* Flexbox to layout the text. */
+    align-items: center; /* Vertically centers text within the paragraph. */
+    font-weight: 600; /* Bold text for emphasis and readability. */
+  }
+  
+  /* Responsive design adjustments for smaller screens. */
+  @media (max-width: 1000px) {
+    .navbar-links-container a {
+      margin-right: 1rem; /* Decreases the right margin as the viewport gets narrower. */
+      font-size: 1rem; /* Decreases the font size for space efficiency on smaller screens. */
+    }
+    .primary-button {
+      font-size: 1rem; /* Decreases the font size to fit smaller screen interfaces better. */
+    }
+    .home-bannerImage-container {
+      max-width: 600px; /* Adjusts the maximum width of the banner image for smaller screens. */
+    }
+  }
+  
+  
+  @media (max-width: 800px) {
+    .nav-logo-container {
+      max-width: 140px; /* Decreases the maximum width of the logo container for smaller screens. */
+    }
+    .navbar-links-container {
+      display: none; /* Hides navbar links on very small screens to prioritize essential navigation elements. */
+    }
+    .navbar-menu-container {
+      display: flex; /* Displays the navbar menu for small screens. */
+    }
+    .home-bannerImage-container {
+      max-width: 450px; /* Further reduces the maximum width of the banner image for even smaller screens. */
+    }
+    .home-banner-container,
+    .about-section-container {
+      flex-direction: column-reverse; /* Stacks children vertically in reverse order for a better visual hierarchy. */
+      align-items: center; /* Centers children horizontally. */
+      justify-content: center; /* Centers children vertically. */
+    }
+    .about-section-container {
+      flex-direction: column; /* Stacks children vertically for a clean layout on small screens. */
+    }
+    .home-image-section,
+    .about-section-image-container {
+      width: 100%; /* Takes full width to utilize available space efficiently. */
+      max-width: 400px; /* Maximum width to ensure images are not too large on small screens. */
+    }
+    .primary-heading {
+      text-align: center; /* Centers the heading text for better readability and alignment. */
+      max-width: 90%; /* Reduces the maximum width to better fit small screens. */
+    }
+    .primary-text {
+      text-align: center; /* Centers the text to match the heading alignment. */
+      max-width: 80%; /* Adjusts the maximum width to improve text block visibility on small screens. */
+    }
+    .home-text-section,
+    .about-section-text-container {
+      justify-content: center; /* Centers text vertically for a balanced look. */
+      align-items: center; /* Centers text horizontally to maintain alignment with other centered elements. */
+      margin-top: 4rem; /* Adds top margin to create space between text and other elements. */
+    }
+    .secondary-button {
+      font-size: 1rem; /* Reduces the font size for a more appropriate proportion on small screens. */
+      padding: 0.8rem 2rem; /* Adjusts padding to maintain button aesthetics on smaller devices. */
+      cursor: pointer; /* Ensures the button remains clickable. */
+    }
+    .about-section-container {
+      margin-top: 5rem !important; /* Increases top margin significantly to ensure visual separation on small screens. */
+    }
+    .about-buttons-container {
+      justify-content: center; /* Centers buttons horizontally to align with other centered content. */
+      flex-direction: column; /* Stacks buttons vertically for better fit and accessibility on small screens. */
+    }
+    .primary-subheading {
+      text-align: center; /* Centers subheading text for consistency with other centered text elements. */
+    }
+    .watch-video-button {
+      margin-left: 0rem !important; /* Removes left margin to fit within the adjusted layout of buttons. */
+      margin-top: 1rem; /* Adds top margin for spacing between this button and others when stacked vertically. */
+      font-size: 1rem !important; /* Adjusts font size to match other text elements on small screens. */
+    }
+    .watch-video-button svg {
+      margin-right: 0.5rem !important; /* Adjusts right margin of the icon to maintain balance within the button. */
+    }
+    .about-section-image-container {
+      margin-right: 0rem !important; /* Removes right margin to allow the image container to fit better on small screens. */
+    }
+    .work-section-wrapper {
+      margin-top: 5rem !important; /* Reduces top margin to maintain proportional spacing on small screens. */
+    }
+    .work-section-bottom {
+      margin-top: 1rem !important; /* Minimizes top margin to reduce excessive spacing on small devices. */
+    }
+    .contact-form-container {
+      padding: 0.5rem !important; /* Reduces padding to fit the form better within the smaller viewport. */
+      flex-direction: column; /* Stacks form elements vertically for better accessibility and layout on small screens. */
+      justify-content: center; /* Ensures form elements are centered within the container. */
+      align-items: center; /* Centers form elements horizontally for a balanced layout. */
+      border-radius: 1rem !important; /* Adjusts border radius to fit the scaled-down form size. */
+    }
+    .contact-form-container input {
+      font-size: 1rem !important; /* Adjusts font size for readability on small devices. */
+      max-width: 100%; /* Ensures input fields do not extend beyond the form container. */
+      padding: 0.5rem 1rem !important; /* Adjusts padding for comfort and aesthetics in the smaller form. */
+      margin-bottom: 0.8rem !important; /* Increases bottom margin to separate input fields clearly. */
+      text-align: center; /* Centers text within inputs to align with the overall centered form layout. */
+    }
+    .footer-wrapper {
+      flex-direction: column; /* Stacks footer elements vertically to better fit narrow screens. */
+    }
+    .footer-section-two {
+      flex-direction: column; /* Adjusts layout to stack elements vertically for a cleaner look on small screens. */
+      margin-top: 2rem; /* Adds top margin to create space between stacked elements. */
+    }
+    .footer-section-columns {
+      margin: 1rem 0rem; /* Adjusts vertical margins to space out elements appropriately within the stacked layout. */
+    }
+    .App {
+      max-width: 95vw; /* Increases maximum width slightly to utilize more of the small screen's viewport width. */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .home-bannerImage-container,
+    .about-background-image-container {
+      display: none; /* Hides large background images that do not fit well on very small screens. */
+    }
+  }
+  
+  .external-resources-container {
+    display: flex; /* Uses flexbox to layout main content and form side by side. */
+    justify-content: space-between; /* Spaces out the main content and form to opposite ends of the container. */
+    align-items: flex-start; /* Aligns items to the top of the container for a clean top-aligned layout. */
+    padding: 2rem; /* Provides padding around the content for spacing from the container edges. */
+    max-width: 1200px; /* Maximum width of the container to control layout on larger screens. */
+    margin: auto; /* Automatically centers the container within its parent element. */
+  }
+  
+  .content {
+    flex: 2; /* Allows the content section to take up twice as much space as the form section. */
+  }
+  
+  .title {
+    font-size: 2rem; /* Sets a large font size for the title for emphasis and visibility. */
+    margin-bottom: 1rem; /* Provides bottom margin to separate the title from the text below. */
+  }
+  
+  .description {
+    font-size: 1rem; /* Standard font size for body text for readability. */
+    line-height: 1.6; /* Increases line height for better readability and visual comfort. */
+    text-align: justify; /* Justifies text to align it neatly along both edges. */
+  }
+  
+  .form-container {
+    flex: 1; /* Assigns the form container a flex grow factor of 1, allowing it to expand to fill space as needed. */
+    background: #f9f9f9; /* Light grey background color to distinguish the form area visually. */
+    padding: 1.5rem; /* Padding inside the form container for spacing around the form elements. */
+    border-radius: 10px; /* Rounded corners for a softer, more approachable form appearance. */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth and emphasis on the form. */
+    text-align: center; /* Centers text within the form for consistency and focus. */
+    margin-left: 2rem; /* Left margin to create spacing from the content section. */
+    margin-top: 4rem; /* Top margin to align the form visually with the content when scrolling. */
+  }
+  
+  .form-container h2 {
+    margin-bottom: 1rem; /* Bottom margin to separate the heading from form fields below. */
+  }
+  
+  form {
+    display: flex; /* Uses flexbox to layout form fields in a column. */
+    flex-direction: column; /* Stacks form fields vertically for a clear, linear form structure. */
+  }
+  
+  label {
+    display: flex; /* Uses flexbox to align label text and form fields. */
+    flex-direction: column; /* Stacks label text and input fields vertically for clarity and ease of use. */
+    align-items: flex-start; /* Aligns labels and fields to the start of the flex container for consistency. */
+    margin-bottom: 0.5rem; /* Provides bottom margin to space labels from the next form element. */
+    font-weight: bold; /* Bold label text to distinguish it from input text. */
+  }
+  
+  input {
+    padding: 0.6rem; /* Padding inside the input field for text comfort and aesthetics. */
+    margin-top: 0.3rem; /* Top margin to separate the input field slightly from its label. */
+    margin-bottom: 1rem; /* Bottom margin to provide space below the input for the next form element. */
+    border: 1px solid #ccc; /* Light grey border for subtle definition against the form background. */
+    border-radius: 5px; /* Slightly rounded corners for the input field to match the overall form aesthetics. */
+    width: 100%; /* Ensures the input field stretches to fill the width of its container. */
+  }
+  
+  button {
+    padding: 0.75rem; /* Adequate padding to make the button easy to click and visually balanced. */
+    background-color: #007bff; /* Bright blue background color for the button to make it stand out as a call to action. */
+    color: black; /* Text color for high contrast against the button background. */
+    border: none; /* No border to maintain a clean, modern look. */
+    cursor: pointer; /* Cursor changes to a pointer to indicate the button is clickable. */
+    font-size: 1rem; /* Sets the button text size for clear legibility. */
+    border-radius: 5px; /* Maintains consistency with input field styling by using similar border radius. */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover for visual feedback to the user. */
+  }
+  
+  
+  
+  @media (max-width: 1200px) {
+    .team-photo {
+      width: 60%; /* Reduces the width of team photos to better fit medium-sized screens. */
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .team-photo {
+      width: 50%; /* Further reduces the width of team photos for smaller screens. */
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .team-photo {
+      width: 80%; /* Larger percentage for very small screens to maintain visibility */
+    }
+    .team-container {
+      font-size: 12px; /* Even smaller text for very small screens */
+    }
+  }
+  
+  .team-caption {
+    font-size: 60px; /* Very large font size for team captions to draw attention and make a strong impact. */
+    font-weight: bold; /* Bold weight for emphasis and readability at large sizes. */
+    color: green; /* Bright green color to inject vibrancy and brand color into the caption. */
+    margin-top: 30px; /* Top margin to space the caption from content above it. */
+    margin-bottom: 70px; /* Large bottom margin to create a substantial separation from content below, enhancing focus on the caption. */
+    text-align: center; /* Centers the caption text to balance it visually within the surrounding content. */
+  }
+  
+  .team-member {
+    display: flex; /* Uses flexbox to layout individual team member elements. */
+    flex-direction: column; /* Stacks team member elements vertically for a clear, organized presentation. */
+    align-items: center; /* Centers team member content horizontally for symmetry and focus. */
+    margin-bottom: 20px; /* Provides bottom margin to space out individual team members within the list. */
+  }
+  
+  .member-image {
+    width: 120px; /* Adjust based on your preference */
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .member-info {
+    display: flex; /* Uses flexbox to layout information elements about the team member. */
+    flex-direction: column; /* Arranges member info elements vertically to keep details organized and readable. */
+    align-items: center; /* Centers information elements horizontally to align with the image above for a tidy layout. */
+    text-align: center; /* Centers text within the member info area to ensure consistency and focus. */
+    margin-top: 10px; /* Top margin separates the info from the image slightly for visual clarity. */
+  }
+  
+  .member-name {
+    font-size: 16px; /* Sets a moderate font size for member names to ensure legibility without dominating the layout. */
+    color: #333; /* Dark grey color for text to provide strong contrast against lighter backgrounds. */
+    margin-top: 5px; /* Top margin to space the name from the member's image or other details just above. */
+  }
+  
+  .member-role {
+    font-size: 14px; /* Slightly smaller font size for roles to differentiate from names and reduce visual hierarchy. */
+    color: darkblue; /* Dark blue for role text to introduce a secondary color for visual interest and differentiation. */
+  }
+  
+  .member-description {
+    font-size: 12px; /* Smaller font size for additional descriptions to keep these details subordinate to names and roles. */
+    color: #666; /* Medium grey for less emphasis, ensuring descriptions are informative but not distracting. */
+  }
+  
+  .about-container {
+    margin-left: 20px; /* Adjust spacing from the left side of the viewport */
+    margin-top: 20px; /* Adjust spacing from the top of the viewport */
+  }
+  
+  .about-heading {
+    color: green; /* Sets the color of the heading text */
+    font-size: 48px; /* Sets the size of the heading text */
+    margin-bottom: 10px; /* Space between the heading and the first paragraph */
+  }
+  
+  .about-text {
+    color: #333; /* Dark gray color for the paragraph text for better readability */
+    font-size: 22px; /* Sets the size of the paragraph text */
+    margin-bottom: 10px; /* Space between paragraphs */
+  }
+  
+  .about-image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ensures the container takes full width of its parent */
+    margin-top: 50px; /* Increase this value to push the image further down */
+  }
+  
+  .about-image {
+    max-width: 200%; /* Increase or adjust the percentage to make the image bigger */
+    height: auto; /* Maintains the aspect ratio of the image */
+    margin-top: 40px; /* Adds space above the image, pushing it down */
+  }
+  
+  
+  @keyframes driveTruck {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100vw); /* Drive to the right off the screen */
+      visibility: hidden; /* Hide when it goes off screen */
+    }
+    50.1% {
+      transform: translateX(-100vw); /* Instantly bring it back offscreen left */
+      visibility: visible;
+    }
+    100% {
+      transform: translateX(0); /* Drive back to the start */
+    }
+  }
+  
+  .truck-animation {
+    position: relative;
+    animation: driveTruck 4s linear forwards;
+  }
+  

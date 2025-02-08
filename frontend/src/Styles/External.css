@@ -1,0 +1,25 @@
+.external-resources-container {
+  display: flex;
+  justify-content: flex-start; /* Aligns content to the left */
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  padding: 20px;
+}
+
+.content {
+  max-width: 800px; /* Optional: Controls width for better readability */
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.description {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+}

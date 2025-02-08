@@ -1,0 +1,56 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Farmer Body -->
+  <path d="M200 150 C180 150 160 180 160 220 C160 260 180 300 200 300 C220 300 240 260 240 220 C240 180 220 150 200 150" fill="#4A4A4A"/>
+  
+  <!-- Overalls -->
+  <path d="M170 220 L170 290 L230 290 L230 220 L215 200 L185 200 Z" fill="#2B579A"/>
+  <rect x="185" y="200" width="30" height="20" fill="#2B579A"/>
+  
+  <!-- Overall Straps -->
+  <rect x="185" y="170" width="8" height="40" fill="#2B579A"/>
+  <rect x="207" y="170" width="8" height="40" fill="#2B579A"/>
+  
+  <!-- Shirt -->
+  <path d="M180 170 C180 190 220 190 220 170 L220 150 L180 150 Z" fill="#F8B88B"/>
+  
+  <!-- Head -->
+  <circle cx="200" cy="130" r="30" fill="#F8D5A3"/>
+  
+  <!-- Straw Hat -->
+  <!-- Hat Brim -->
+  <ellipse cx="200" cy="115" rx="70" ry="12" fill="#D4A017"/>
+  <!-- Hat Crown -->
+  <path d="M170 115 Q200 70 230 115" fill="#D4A017"/>
+  <!-- Straw Texture -->
+  <g stroke="#8B7355" stroke-width="0.5" fill="none">
+    <!-- Circular straw patterns -->
+    <path d="M175 110 Q200 75 225 110"/>
+    <path d="M180 108 Q200 80 220 108"/>
+    <path d="M185 105 Q200 85 215 105"/>
+    <!-- Horizontal straw lines -->
+    <line x1="170" y1="115" x2="230" y2="115"/>
+    <line x1="175" y1="110" x2="225" y2="110"/>
+    <line x1="180" y1="105" x2="220" y2="105"/>
+    <line x1="185" y1="100" x2="215" y2="100"/>
+    <line x1="190" y1="95" x2="210" y2="95"/>
+    <!-- Brim texture -->
+    <path d="M140 115 Q200 120 260 115"/>
+    <path d="M145 114 Q200 119 255 114"/>
+    <path d="M150 116 Q200 121 250 116"/>
+  </g>
+  
+  <!-- Face -->
+  <path d="M185 130 C185 135 195 140 200 140 C205 140 215 135 215 130" fill="none" stroke="#333" stroke-width="2"/>
+  
+  <!-- Eyes -->
+  <circle cx="190" cy="125" r="2" fill="#333"/>
+  <circle cx="210" cy="125" r="2" fill="#333"/>
+  
+  <!-- Arms -->
+  <path d="M170 200 C150 220 140 240 145 260" fill="none" stroke="#F8B88B" stroke-width="10"/>
+  <path d="M230 200 C250 220 260 240 255 260" fill="none" stroke="#F8B88B" stroke-width="10"/>
+  
+  <!-- Boots -->
+  <rect x="165" y="290" width="25" height="15" fill="#654321"/>
+  <rect x="210" y="290" width="25" height="15" fill="#654321"/>
+</svg>
