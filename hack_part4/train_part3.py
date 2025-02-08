@@ -17,7 +17,7 @@ crop_files = {
 def load_data():
     all_data = []
 
-    # iterate through every pair in crop file map ad congregate each one's data in all_data
+    # iterate through every pair in crop file map and congregate each one's data in all_data
     for crop, filename in crop_files.items():
         if os.path.exists(filename):  # Ensure the file exists
             df = pd.read_csv(filename)
