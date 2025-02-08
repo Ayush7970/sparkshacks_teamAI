@@ -1,62 +1,68 @@
+
 import './normalize.css';
 import './App.css';
-import { useState } from 'react';
-
+import { useState, useEffect, useRef } from 'react';
+import axios from 'axios';
+import bobImg from './Bob.png';
+import userImg from './User.png';
 
 function App() {
-
   const [input, setInput] = useState("");
-  const [chatlog, setChatLog] = useState([{
-    user: "Bob",
-    message: "How can I help you today?"
-  },{
-    user: "Me",
-    message: "I want to FARM! today"
-  }]);
+  const [chatlog, setChatLog] = useState([
+    { user: "Ollama", message: "Hello! How can I help you today? 😊" }
+  ]);
+
+  const chatLogRef = useRef(null); // Reference to chatlog container
 
   async function handleSubmit(e) {
     e.preventDefault();
-    setChatLog([...chatlog, { user: "me", message: `${input}`}]);
+
+    if (!input.trim()) return;
+
+    const newUserMessage = { user: "Me", message: input };
+    setChatLog((prevChatLog) => [...prevChatLog, newUserMessage]);
     setInput("");
-    // FETCH RESPONSE FROM API and COMBINE with array of messages
-    const response = await fetch("http://localhost:3000", { //CHANGE TO CORRECT LISTENING PORT
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        message: chatlog.map((message) => message.message).join("")
-      })
-    });
-    const data = await response.json();
-    console.log(data);
+
+    try {
+      const response = await axios.post("http://127.0.0.1:5000/chat", {
+        message: input,
+      });
+
+      if (response.data && response.data.response) {
+        const ollamaMessage = { user: "Ollama", message: response.data.response };
+        setChatLog((prevChatLog) => [...prevChatLog, ollamaMessage]);
+      } else {
+        console.error("No response received from Ollama.");
+      }
+    } catch (error) {
+      console.error("Error fetching response from Ollama:", error);
+    }
   }
+
+  // Scroll to the latest message whenever chatlog updates
+  useEffect(() => {
+    if (chatLogRef.current) {
+      chatLogRef.current.scrollTop = chatLogRef.current.scrollHeight;
+    }
+  }, [chatlog]);
 
   return (
     <div className="App">
-      <aside className="sideMenu">
-        <div className="sideMenu-button">
-          <span> + </span>
-          New Chat
-        </div>
-      </aside>
       <section className="chatbox">
-        <div className="chatlog"> 
+        <div className="chatlog" ref={chatLogRef}> 
           {chatlog.map((message, index) => 
-          <ChatMessage key={index} message={message}/>)}
-          
-
-          
+            <ChatMessage key={index} message={message}/>
+          )}
         </div>
         <div className="chatbox-holder">
           <form onSubmit={handleSubmit}>
             <input 
-            rows="1"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            className="chatbox-text"
-            placeholder="Type your message here">
-            </input>
+              rows="1"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              className="chatbox-text"
+              placeholder="Type your message here"
+            />
           </form>
         </div>
       </section>
@@ -64,19 +70,28 @@ function App() {
   );
 }
 
-const ChatMessage = ({message}) => {
+const ChatMessage = ({ message }) => {
   return (
-    <div className={`chat-message ${message.user === "Bob" && "llm"}`}>
+    <div className={`chat-message ${message.user === "Ollama" ? "llm" : ""}`}>
       <div className="chat-message-center">
-        <div className={`avatar ${message.user === "Bob" && "llm"}`}>
-        
+        <div 
+          className={`avatar ${message.user === "Ollama" ? "llm" : "user"}`} 
+          style={{ 
+            backgroundImage: `url(${message.user === "Ollama" ? bobImg : userImg})`, 
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            width: 40,
+            height: 40
+          }}>
         </div>
+
         <div className="message">
           {message.message}
         </div>
       </div>
     </div>
-  )
+  );
 }
+
 
 export default App;

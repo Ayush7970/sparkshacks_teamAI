@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: flex;
-  background-color: #282c34;
+  background-color: #e48f0f;
   color: white;
   position: absolute;
   top: 0;
@@ -18,7 +18,7 @@
 
 .chatbox {
   flex:1;
-  background-color: #343541;
+  background-color: #e48f0f;
   position: relative;
 }
 
@@ -47,15 +47,15 @@
 }
 
 .chatbox-text {
-  background-color: #40414f;
+  background-color: #dbbd95;
   width: 90%;
   padding: 12px;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 1.25em;
   border-radius: 5px;
   border: none;
   outline: none;
-  box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
 }
 
 .chatlog {
@@ -63,7 +63,7 @@
 }
 
 .chat-message.llm {
-  background-color: #444654;
+  background-color: #d08412;
   
 }
 
@@ -77,15 +77,15 @@
   display: flex;
 }
 
-.avatar {
-  background: white;
+.avatar.user {
+  background: rgb(12, 196, 30);
   border-radius: 50%;
   width: 40px;
   height: 40px;
 }
 
 .avatar.llm {
-  background: #0da37f;
+  background: #5d0da3;
   border-radius: 50%;
   width: 40px;
   height: 40px;
