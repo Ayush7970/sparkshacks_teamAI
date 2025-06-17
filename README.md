@@ -4,6 +4,16 @@
 
 This project proposes a technological solution aimed at sustainable AI innovation and environmentally friendly practices. By integrating an AI-powered chatbot tailored for farmers and a disaster prediction system based on real-time data, the platform enhances resource efficiency, minimizes environmental impact, and helps communities proactively respond to potential agricultural risks. The system is designed to assist farmers in optimizing resources, predicting disasters, and making data-driven decisions for sustainable agriculture.
 
+---
+
+## 🎥 **Demo Video**
+
+👉 [Watch the Sustainable AI Farming Assistant Demo on YouTube](https://www.youtube.com/watch?v=ppVIs93FwGI)
+
+[![Sustainable AI Farming Assistant Demo](https://img.youtube.com/vi/ppVIs93FwGI/0.jpg)](https://www.youtube.com/watch?v=ppVIs93FwGI)
+
+---
+
 ## 🚀 Tech Stack
 
 The technologies used in this project were chosen to create a scalable, efficient, and responsive system for sustainable farming. Flask provides a lightweight yet powerful backend for API development, while React.js ensures a seamless user experience. The integration of machine learning enables accurate disaster predictions, and the use of Ollama for AI-powered assistance helps farmers make data-driven decisions.
