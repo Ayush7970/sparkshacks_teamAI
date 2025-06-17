@@ -34,6 +34,8 @@ The technologies used in this project were chosen to create a scalable, efficien
 - **Custom Components** for interactive user experience
 - **CSS** for styling
 
+---
+
 ## 🔧 Features
 
 ### Backend (Flask API)
@@ -54,6 +56,9 @@ The backend serves as the core of the application, handling data processing, use
 - **Meet the Team:** Introduction to the development team.
 - **About Page:** Information about the project’s mission and goals.
 - **AI Chat Interface:** Allows users to interact with the AI assistant for guidance.
+
+---
+
 
 ## 🏗 Project Structure
 
